@@ -27,7 +27,7 @@ int main(){
     }
 
     // Pointer address: 0x7fffef7a8d80 
-    // ptr++;
+    // ptr++; increment by 4 bytes
     // Pointer address: 0x7fffef7a8d80 + 4 = 0x7fffef7a8d84
 
     return 0;
