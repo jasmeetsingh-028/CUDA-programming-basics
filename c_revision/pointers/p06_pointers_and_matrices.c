@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+// size_t = size type for memory allocation
+// size_t is an unsigned integer data type 
+// it is used to represent the size of objects in bytes.
+
+
 int main(){
 
     int arr1[4] = {1,2,3,4};
@@ -12,9 +17,11 @@ int main(){
 
     // matrix[0] and matrix[1] are pointers
 
-    int matrixLength = sizeof(matrix) / sizeof(matrix[0]);
+    size_t matrixLength = sizeof(matrix) / sizeof(matrix[0]);
 
-    printf("Number of elements in matrix: %d\n", matrixLength);
+    // since matrix[0] is an int and its size in bytes is 4 which is 32 bits so this is int32
+
+    printf("Number of elements in matrix: %zu\n", matrixLength);
 
     for(int i=0; i<matrixLength; i++){
         for(int j=0; j<4; j++){
