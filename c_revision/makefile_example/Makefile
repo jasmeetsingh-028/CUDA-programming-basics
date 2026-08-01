@@ -1,7 +1,11 @@
-.PHONY: 01 clean
+.PHONY: 01 02 clean
+# phony is used to declare targets that are not files, so that make will always execute the commands associated with them, even if a file with the same name exists.
 
 GCC = gcc
 NVCC = nvcc
+
+# = used for defining varibles
+# := is used for defining variables that are evaluated immediately, so that the value of the variable is fixed at the time of definition.
 
 # command to compile and run cuda file: nvcc -o 01_cuda 01_cuda.cu && ./01_cuda
 
