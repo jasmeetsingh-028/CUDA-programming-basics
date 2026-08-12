@@ -1,4 +1,4 @@
-.PHONY: 01 02 clean
+.PHONY: 01 02 03 04 05 clean
 # phony is used to declare targets that are not files, so that make will always execute the commands associated with them, even if a file with the same name exists.
 # suppose if you have a file named clean in the directory, and you run make clean, make will not execute the commands associated with the clean target because it thinks that the target is up to date. 
 # By declaring clean as a phony target, you ensure that make will always execute the commands associated with it, regardless of whether a file named clean exists or not.
@@ -18,5 +18,13 @@ NVCC = nvcc
 	@$(NVCC) -o 03_cuda block_dims.cu 
 	@./03_cuda
 
+04: global_thread_id.cu
+	@$(NVCC) -o 04_cuda global_thread_id.cu 
+	@./04_cuda
+
+05: gpu_data_processing.cu
+	@$(NVCC) -o 05_cuda gpu_data_processing.cu 
+	@./05_cuda
+
 clean:
-	@rm -f 01_cuda 02_cuda 03_cuda  
+	@rm -f 01_cuda 02_cuda 03_cuda 04_cuda 05_cuda
