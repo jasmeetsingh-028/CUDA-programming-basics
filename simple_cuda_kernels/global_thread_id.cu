@@ -8,7 +8,7 @@ __global__ void thread_id_kernel(){
 
  int main(){
 
-    thread_id_kernel<<<3, 5>>>(); // 2 blocks and 3 threads // kernel executes once per thread
+    thread_id_kernel<<<3, 5>>>(); // 3 blocks and 5 threads // kernel executes once per thread
     cudaDeviceSynchronize();  // Wait for the GPU to finish before exiting
     return 0;
 }

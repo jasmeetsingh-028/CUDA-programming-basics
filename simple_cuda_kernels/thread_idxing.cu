@@ -9,3 +9,4 @@ int main(){
     cudaDeviceSynchronize();  // Wait for the GPU to finish before exiting
     return 0;
 }
+
