@@ -15,11 +15,20 @@ int main(){
 
     int* matrix[] = {ptr1, ptr2}; //array of pointers not a pointer itself
 
-    // matrix[0] and matrix[1] are pointers
+    //both the addresses are same
 
+    printf("address that ptr1 points to: %p\n", ptr1);
+    printf("address that name arr1 points to: %p\n", arr1);
+
+    // matrix[0] and matrix[1] are pointers
+ 
     size_t matrixLength = sizeof(matrix) / sizeof(matrix[0]);
+    //printf("Size of the varible matrixLength: %zu\n", sizeof(matrixLength));  // sizeof gives the size of the variable in bytes
+
+    printf("size of matirx: %zu\n", sizeof(matrix));
 
     // since matrix[0] is an int and its size in bytes is 4 which is 32 bits so this is int32
+    // sizeof(matrix) = 
 
     printf("Number of elements in matrix: %zu\n", matrixLength);
 
